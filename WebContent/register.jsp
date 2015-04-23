@@ -39,8 +39,12 @@
                         <td><input type="password" name="pass" value="" /></td>
                     </tr>
                     <tr>
-                        <td><input type="submit" value="Submit" /></td>
-                        <td><input type="reset" value="Reset" /></td>
+                    <td>
+                    </td>
+                        <td><input type="submit" value="Submit" />
+                        <input type="reset" value="Reset" />
+                        
+                        </td>
                     </tr>
                     <tr>
                         <td colspan="2">Already registered!! <a href="login.jsp">Login Here</a></td>

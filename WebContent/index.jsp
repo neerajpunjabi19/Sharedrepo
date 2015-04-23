@@ -5,12 +5,31 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<script>
+function PopupCenter(url, title, w, h) {
+    // Fixes dual-screen position                         Most browsers      Firefox
+    var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
+    var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;
+
+    width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+    height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+
+    var left = ((width / 2) - (w / 2)) + dualScreenLeft;
+    var top = ((height / 2) - (h / 2)) + dualScreenTop;
+    var newWindow = window.open(url, title, 'toolbar=0,location=0,status=0,menubar=0,scrollbars=no,resizable=no, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+
+    // Puts focus on the newWindow
+    if (window.focus) {
+        newWindow.focus();
+    }
+}
+</script>
 </head>
 <body>
 <input type="button" name="choice" 
-onclick="window.open('login.jsp','popuppage', 'width=450, height=toolbar=1,resizable=1,scrollbars=yes,height=700,top=100,left=100');" value="Login">
+onclick="PopupCenter('login.jsp','Login', '450', '100');" value="Login">
 
 <input type="button" name="choice" 
-onclick="window.open('register.jsp','popuppage', 'width=450, height=toolbar=1,resizable=1,scrollbars=yes,height=700,top=100,left=100');" value="Register">
+onclick="PopupCenter('register.jsp','Register', '450', '400');" value="Register">
 </body>
 </html>

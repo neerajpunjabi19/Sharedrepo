@@ -2,13 +2,36 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Login</title>
 </head>
 <body>
-<form method="post" action="Sample1">
-username:<input type="text" name="name"><br>
-password:<input type="password" name="password"><br>
-<input type="submit" value="submit">
+<form method="post" action="login">
+
+<center>
+            <table border="1" width="30%" cellpadding="5">
+               
+                <tbody>
+                    
+                    <tr>
+                        <td>User Name</td>
+                        <td><input type="text" name="name"  /></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password" name="password"  /></td>
+                    </tr>
+                    <tr>
+                    <td>
+                    </td>
+                        <td><input type="submit" value="Submit" />
+                        <input type="reset" value="Reset" />
+                        
+                        </td>
+                    </tr>
+                   
+                </tbody>
+            </table>
+            </center>
 </form>
 </body>
 </html>
